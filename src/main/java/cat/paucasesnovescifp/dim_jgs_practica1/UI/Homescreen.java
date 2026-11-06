@@ -72,7 +72,7 @@ public class Homescreen extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Num. Registro", "Titulo del juego", "Usuario del préstamo", "Plataforma", "Fecha inicio", "Fecha devolución", "Devuelto?", "Género"
+                "Num. Registre", "Títol del joc", "Usuari del lloguer", "Plataforma", "Data d'inici", "Data de tornada", "Retornat?", "Gènere"
             }
         ) {
             Class[] types = new Class [] {
@@ -95,21 +95,21 @@ public class Homescreen extends javax.swing.JFrame {
         jScrollPane1.setViewportView(mainTable);
         mainTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        rowCountLabel.setText("Numero de prestamos: 0");
+        rowCountLabel.setText("Numero de lloguers: 0");
 
-        menuBorrowButton.setText("Prestamo");
+        menuBorrowButton.setText("Lloguer");
 
         agregarPrestamo.setText("Agregar...");
         agregarPrestamo.addActionListener(this::agregarPrestamoActionPerformed);
         menuBorrowButton.add(agregarPrestamo);
 
-        eliminarPrestamo.setText("Devolver...");
+        eliminarPrestamo.setText("Tornar...");
         eliminarPrestamo.addActionListener(this::eliminarPrestamoActionPerformed);
         menuBorrowButton.add(eliminarPrestamo);
 
         mainMenuBar.add(menuBorrowButton);
 
-        menuUserButton.setText("Usuario");
+        menuUserButton.setText("Usuari");
 
         agregarUsuario.setText("Agregar...");
         agregarUsuario.addActionListener(this::agregarUsuarioActionPerformed);
@@ -121,7 +121,7 @@ public class Homescreen extends javax.swing.JFrame {
 
         mainMenuBar.add(menuUserButton);
 
-        menuGameButton.setText("Juego");
+        menuGameButton.setText("Joc");
 
         agregarJuego.setText("Agregar...");
         agregarJuego.addActionListener(this::agregarJuegoActionPerformed);
@@ -164,7 +164,7 @@ public class Homescreen extends javax.swing.JFrame {
 
     private void refreshTable(){
         DefaultTableModel dtm = new DefaultTableModel();
-        dtm.setColumnIdentifiers(new String [] {"Num. Registro", "Titulo del juego", "Usuario del préstamo", "Plataforma", "Fecha inicio", "Fecha devolución", "Devuelto?", "Género"});
+        dtm.setColumnIdentifiers(new String [] {"Num. Registre", "Títol del joc", "Usuari del lloguer", "Plataforma", "Data d'inici", "Data de tornada", "Retornat?", "Gènere"});
         List<Borrow> list = BorrowList.getList();
         for (int i = list.size() - 1; i >= 0; i--){
             dtm.addRow(list.get(i).castToRow());
@@ -173,7 +173,7 @@ public class Homescreen extends javax.swing.JFrame {
         colorRows(mainTable, BorrowList.getList());
 
         int rowCount = mainTable.getRowCount();
-        rowCountLabel.setText("Numero de prestamos: " + rowCount);
+        rowCountLabel.setText("Numero de lloguers: " + rowCount);
     }
 
     public void colorRows(JTable mainTable, List<Borrow> borrowList) {
@@ -230,8 +230,8 @@ public class Homescreen extends javax.swing.JFrame {
             List<PLATFORM> game2Platforms = new ArrayList<>(){{add(PLATFORM.PC); add(PLATFORM.XBOX);}};
             List<Integer> game1Counts = new ArrayList<>(){{add(2); add(3);}}; //Cantidades consideradas como si ya estuvieran en prestamo
             List<Integer> game2Counts = new ArrayList<>(){{add(1); add(4);}};
-            Game game1 = new Game("juego 1", GENRE.RPG, game1Platforms, game1Counts);
-            Game game2 = new Game("juego 2", GENRE.ROGUELIKE, game2Platforms, game2Counts);
+            Game game1 = new Game("joc 1", GENRE.RPG, game1Platforms, game1Counts);
+            Game game2 = new Game("joc 2", GENRE.ROGUELIKE, game2Platforms, game2Counts);
             GameList.add(game1);
             GameList.add(game2);
         }

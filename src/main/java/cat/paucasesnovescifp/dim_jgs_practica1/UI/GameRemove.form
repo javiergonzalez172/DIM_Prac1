@@ -69,7 +69,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="gameLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Juego:"/>
+        <Property name="text" type="java.lang.String" value="Joc:"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="subPannel">
@@ -185,7 +185,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="nameLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre:"/>
+            <Property name="text" type="java.lang.String" value="Nom:"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -207,7 +207,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="genderLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="G&#xe9;nero:"/>
+            <Property name="text" type="java.lang.String" value="G&#xe8;nere:"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -229,7 +229,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="platformLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Plataformas:"/>
+            <Property name="text" type="java.lang.String" value="Plataformes:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="pcLabel">
@@ -326,22 +326,22 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Unidades"/>
+            <Property name="text" type="java.lang.String" value="Unitats"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Unidades"/>
+            <Property name="text" type="java.lang.String" value="Unitats"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Unidades"/>
+            <Property name="text" type="java.lang.String" value="Unitats"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Unidades"/>
+            <Property name="text" type="java.lang.String" value="Unitats"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -356,7 +356,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gameSelectActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="List&lt;Game&gt; tempGameList = GameList.getList();&#xa;String[] games = new String[tempGameList.size() + 1];&#xa;for(int i = 0; i &lt; tempGameList.size() + 1; i++){&#xa;    if(i == 0){&#xa;        games[i] = &quot;Seleccionar juego&quot;;&#xa;    }&#xa;    else{&#xa;        games[i] = tempGameList.get(i-1).getName();&#xa;    }&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="List&lt;Game&gt; tempGameList = GameList.getList();&#xa;String[] games = new String[tempGameList.size() + 1];&#xa;for(int i = 0; i &lt; tempGameList.size() + 1; i++){&#xa;    if(i == 0){&#xa;        games[i] = &quot;Seleccionar joc&quot;;&#xa;    }&#xa;    else{&#xa;        games[i] = tempGameList.get(i-1).getName();&#xa;    }&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -382,7 +382,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="text" type="java.lang.String" value="Cancel&#xb7;lar"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cancelButtonMouseClicked"/>

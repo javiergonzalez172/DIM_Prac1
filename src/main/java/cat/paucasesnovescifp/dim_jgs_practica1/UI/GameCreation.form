@@ -38,15 +38,10 @@
                   <Component id="platformLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="nameField" min="-2" pref="222" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="nameLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="nameField" min="-2" pref="222" max="-2" attributes="0"/>
+                          <Component id="nameLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="genreLabel" min="-2" max="-2" attributes="0"/>
                           <Component id="genreField" min="-2" pref="222" max="-2" attributes="0"/>
@@ -88,7 +83,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="nameLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre:"/>
+        <Property name="text" type="java.lang.String" value="Nom:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="nameField">
@@ -108,7 +103,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="genreLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="G&#xe9;nero"/>
+        <Property name="text" type="java.lang.String" value="G&#xe8;nere:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="platformLabel">
@@ -143,21 +138,14 @@
                       <Component id="pcUnitsLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="switch2UnitsLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="pcSpinner" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                              <Component id="ps5Spinner" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                              <Component id="xboxSpinner" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="switch2Spinner" min="-2" pref="138" max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="pcSpinner" alignment="0" pref="138" max="32767" attributes="0"/>
+                      <Component id="ps5Spinner" alignment="0" pref="138" max="32767" attributes="0"/>
+                      <Component id="xboxSpinner" alignment="0" pref="138" max="32767" attributes="0"/>
+                      <Component id="switch2Spinner" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -228,22 +216,22 @@
         </Component>
         <Component class="javax.swing.JLabel" name="pcUnitsLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Unidades:"/>
+            <Property name="text" type="java.lang.String" value="Unitats:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="ps5UnitsLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Unidades:"/>
+            <Property name="text" type="java.lang.String" value="Unitats:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="xboxUnitsLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Unidades:"/>
+            <Property name="text" type="java.lang.String" value="Unitats:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="switch2UnitsLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Unidades:"/>
+            <Property name="text" type="java.lang.String" value="Unitats:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JSpinner" name="pcSpinner">
@@ -290,7 +278,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="text" type="java.lang.String" value="Cancel&#xb7;lar"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cancelButtonMouseClicked"/>

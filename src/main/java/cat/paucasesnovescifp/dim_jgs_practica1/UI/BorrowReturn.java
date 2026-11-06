@@ -54,7 +54,7 @@ public class BorrowReturn extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Num. Registro", "Titulo del juego", "Usuario del préstamo", "Plataforma", "Fecha inicio", "Fecha devolución", "Devuelto?", "Género"
+                "Num. Registre", "Títol del joc", "Usuari del lloguer", "Plataforma", "Data d'inici", "Data de tornada", "Retornat?", "Gènere"
             }
         ) {
             Class[] types = new Class [] {
@@ -89,11 +89,11 @@ public class BorrowReturn extends javax.swing.JFrame {
         }
         idField.setModel(new javax.swing.DefaultComboBoxModel<>(ids));
 
-        idLabel.setText("ID del préstamo:");
+        idLabel.setText("ID del lloguer:");
 
-        markField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Devuelto", "No devuelto" }));
+        markField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Retornat", "No retornat" }));
 
-        markLabel.setText("Marcar como:");
+        markLabel.setText("Marcar com a:");
 
         confirmButton4.setBackground(new java.awt.Color(34, 139, 34));
         confirmButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,7 +106,7 @@ public class BorrowReturn extends javax.swing.JFrame {
 
         cancelButton.setBackground(new java.awt.Color(153, 0, 0));
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
-        cancelButton.setText("Cancelar");
+        cancelButton.setText("Cancel·lar");
         cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cancelButtonMouseClicked(evt);
@@ -187,7 +187,7 @@ public class BorrowReturn extends javax.swing.JFrame {
 
     private void refreshTable(){
         DefaultTableModel dtm = new DefaultTableModel();
-        dtm.setColumnIdentifiers(new String [] {"Num. Registro", "Titulo del juego", "Usuario del préstamo", "Plataforma", "Fecha inicio", "Fecha devolución", "Devuelto?", "Género"});
+        dtm.setColumnIdentifiers(new String [] {"Num. Registre", "Títol del joc", "Usuari del lloguer", "Plataforma", "Data d'inici", "Data de tornada", "Retornat?", "Gènere"});
         List<Borrow> list = BorrowList.getList();
         for (int i = list.size() - 1; i >= 0; i--){
             dtm.addRow(list.get(i).castToRow());

@@ -60,13 +60,13 @@ public class GameCreation extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agregar juego");
 
-        nameLabel.setText("Nombre:");
+        nameLabel.setText("Nom:");
 
         nameField.setToolTipText("");
 
         genreField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar género", "RPG", "SANDBOX", "ROGUELIKE", "MMO", "VISUAL_NOVEL", "STRATEGY", "SIMULATION", "SHOOTER", "FIGHTING", "PUZZLE", "SPORTS", "RACING" }));
 
-        genreLabel.setText("Género");
+        genreLabel.setText("Gènere:");
 
         platformLabel.setText("Plataformas:");
 
@@ -100,13 +100,13 @@ public class GameCreation extends javax.swing.JFrame {
             }
         });
 
-        pcUnitsLabel.setText("Unidades:");
+        pcUnitsLabel.setText("Unitats:");
 
-        ps5UnitsLabel.setText("Unidades:");
+        ps5UnitsLabel.setText("Unitats:");
 
-        xboxUnitsLabel.setText("Unidades:");
+        xboxUnitsLabel.setText("Unitats:");
 
-        switch2UnitsLabel.setText("Unidades:");
+        switch2UnitsLabel.setText("Unitats:");
 
         pcSpinner.setEnabled(false);
 
@@ -133,17 +133,13 @@ public class GameCreation extends javax.swing.JFrame {
                     .addComponent(ps5UnitsLabel)
                     .addComponent(pcUnitsLabel)
                     .addComponent(switch2UnitsLabel))
-                .addGroup(separatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(separatorLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(separatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pcSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ps5Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(xboxSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(separatorLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(switch2Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(27, 27, 27)
+                .addGroup(separatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pcSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(ps5Spinner, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(xboxSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                    .addComponent(switch2Spinner))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         separatorLayout.setVerticalGroup(
             separatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,7 +178,7 @@ public class GameCreation extends javax.swing.JFrame {
 
         cancelButton.setBackground(new java.awt.Color(153, 0, 0));
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
-        cancelButton.setText("Cancelar");
+        cancelButton.setText("Cancel·lar");
         cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cancelButtonMouseClicked(evt);
@@ -209,12 +205,9 @@ public class GameCreation extends javax.swing.JFrame {
                     .addComponent(platformLabel, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(46, 46, 46))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(nameLabel)
-                                .addGap(221, 221, 221)))
+                            .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nameLabel))
+                        .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(genreLabel)
                             .addComponent(genreField, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -280,11 +273,11 @@ public class GameCreation extends javax.swing.JFrame {
 
     private void confirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmButtonMouseClicked
         if (nameField.getText().isEmpty()){
-            errorLabel.setText("ERROR: El juego no tiene nombre");
+            errorLabel.setText("ERROR: El joc no té nom");
             return;
         }
         if (castGenre(genreField.getSelectedItem().toString()) == null){
-            errorLabel.setText("ERROR: El juego no tiene género");
+            errorLabel.setText("ERROR: El joc no té gènere");
             return;
         }
         

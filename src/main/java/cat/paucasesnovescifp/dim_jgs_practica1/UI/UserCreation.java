@@ -7,7 +7,6 @@ package cat.paucasesnovescifp.dim_jgs_practica1.UI;
 import cat.paucasesnovescifp.dim_jgs_practica1.Class.User;
 import cat.paucasesnovescifp.dim_jgs_practica1.SharedLists.UserList;
 import java.time.LocalDate;
-import java.util.List;
 
 /**
  *
@@ -80,24 +79,24 @@ public class UserCreation extends javax.swing.JFrame {
 
         cancelButton.setBackground(new java.awt.Color(153, 0, 0));
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
-        cancelButton.setText("Cancelar");
+        cancelButton.setText("Cancel·lar");
         cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cancelButtonMouseClicked(evt);
             }
         });
 
-        nameLabel.setText("Nombre:");
+        nameLabel.setText("Nom:");
 
-        surname1Label.setText("Apellido 1:");
+        surname1Label.setText("Cognom 1:");
 
-        surname2Label.setText("Apellido 2:");
+        surname2Label.setText("Cognom 2:");
 
         dniLabel.setText("DNI:");
 
-        phoneLabel.setText("Teléfono:");
+        phoneLabel.setText("Telèfon:");
 
-        dateLabel.setText("Fecha de registro:");
+        dateLabel.setText("Data de registre:");
 
         dateField.setModel(new javax.swing.SpinnerDateModel());
         dateField.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -193,23 +192,23 @@ public class UserCreation extends javax.swing.JFrame {
 
     private void confirmButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmButtonMouseClicked
         if (nameField.getText().isEmpty()){
-            errorLabel.setText("ERROR: Usuario no tiene nombre");
+            errorLabel.setText("ERROR: Usuari no té nom");
             return;
         }
         if (surname1Field.getText().isEmpty()){
-            errorLabel.setText("ERROR: Usuario no tiene primer apellido");
+            errorLabel.setText("ERROR: Usuari no té primer cognom");
             return;
         }
         if (surname2Field.getText().isEmpty()){
-            errorLabel.setText("ERROR: Usuario no tiene segundo apellido");
+            errorLabel.setText("ERROR: Usuari no té segon cognom");
             return;
         }
         if (dniField.getText().isEmpty()){
-            errorLabel.setText("ERROR: Usuario no tiene DNI asignado");
+            errorLabel.setText("ERROR: Usuari no té DNI assignat");
             return;
         }
         if (phoneField.getText().isEmpty()){
-            errorLabel.setText("ERROR: Usuario no tiene teléfono asignado");
+            errorLabel.setText("ERROR: Usuari no té telèfon assignat");
             return;
         }
         

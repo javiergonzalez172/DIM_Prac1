@@ -6,7 +6,7 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="menuBorrowButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Prestamo"/>
+            <Property name="text" type="java.lang.String" value="Lloguer"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="agregarPrestamo">
@@ -19,7 +19,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="eliminarPrestamo">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Devolver..."/>
+                <Property name="text" type="java.lang.String" value="Tornar..."/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarPrestamoActionPerformed"/>
@@ -29,7 +29,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuUserButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Usuario"/>
+            <Property name="text" type="java.lang.String" value="Usuari"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="agregarUsuario">
@@ -52,7 +52,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="menuGameButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Juego"/>
+            <Property name="text" type="java.lang.String" value="Joc"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="agregarJuego">
@@ -139,14 +139,14 @@
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="8" rowCount="0">
-                <Column editable="false" title="Num. Registro" type="java.lang.Integer"/>
-                <Column editable="false" title="Titulo del juego" type="java.lang.String"/>
-                <Column editable="false" title="Usuario del pr&#xe9;stamo" type="java.lang.String"/>
+                <Column editable="false" title="Num. Registre" type="java.lang.Integer"/>
+                <Column editable="false" title="T&#xed;tol del joc" type="java.lang.String"/>
+                <Column editable="false" title="Usuari del lloguer" type="java.lang.String"/>
                 <Column editable="false" title="Plataforma" type="java.lang.Object"/>
-                <Column editable="false" title="Fecha inicio" type="java.lang.Object"/>
-                <Column editable="false" title="Fecha devoluci&#xf3;n" type="java.lang.Object"/>
-                <Column editable="false" title="Devuelto?" type="java.lang.Boolean"/>
-                <Column editable="false" title="G&#xe9;nero" type="java.lang.Object"/>
+                <Column editable="false" title="Data d&apos;inici" type="java.lang.Object"/>
+                <Column editable="false" title="Data de tornada" type="java.lang.Object"/>
+                <Column editable="false" title="Retornat?" type="java.lang.Boolean"/>
+                <Column editable="false" title="G&#xe8;nere" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -203,7 +203,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="rowCountLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Numero de prestamos: 0"/>
+        <Property name="text" type="java.lang.String" value="Numero de lloguers: 0"/>
       </Properties>
     </Component>
   </SubComponents>

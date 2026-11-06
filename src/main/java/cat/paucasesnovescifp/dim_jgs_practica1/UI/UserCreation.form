@@ -109,7 +109,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="text" type="java.lang.String" value="Cancel&#xb7;lar"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cancelButtonMouseClicked"/>
@@ -181,17 +181,17 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="nameLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre:"/>
+            <Property name="text" type="java.lang.String" value="Nom:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="surname1Label">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Apellido 1:"/>
+            <Property name="text" type="java.lang.String" value="Cognom 1:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="surname2Label">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Apellido 2:"/>
+            <Property name="text" type="java.lang.String" value="Cognom 2:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="dniLabel">
@@ -201,12 +201,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="phoneLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
+            <Property name="text" type="java.lang.String" value="Tel&#xe8;fon:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="dateLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha de registro:"/>
+            <Property name="text" type="java.lang.String" value="Data de registre:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nameField">

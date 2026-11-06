@@ -67,23 +67,23 @@ public class GameRemove extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        gameLabel.setText("Juego:");
+        gameLabel.setText("Joc:");
 
         subPannel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        nameLabel.setText("Nombre:");
+        nameLabel.setText("Nom:");
 
         nameField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         nameField.setEnabled(false);
         jScrollPane1.setViewportView(nameField);
 
-        genderLabel.setText("Género:");
+        genderLabel.setText("Gènere:");
 
         genderField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         genderField.setEnabled(false);
         jScrollPane2.setViewportView(genderField);
 
-        platformLabel.setText("Plataformas:");
+        platformLabel.setText("Plataformes:");
 
         pcLabel.setText("PC");
 
@@ -113,13 +113,13 @@ public class GameRemove extends javax.swing.JFrame {
         switch2Field.setEnabled(false);
         jScrollPane6.setViewportView(switch2Field);
 
-        jLabel1.setText("Unidades");
+        jLabel1.setText("Unitats");
 
-        jLabel2.setText("Unidades");
+        jLabel2.setText("Unitats");
 
-        jLabel3.setText("Unidades");
+        jLabel3.setText("Unitats");
 
-        jLabel4.setText("Unidades");
+        jLabel4.setText("Unitats");
 
         javax.swing.GroupLayout subPannelLayout = new javax.swing.GroupLayout(subPannel);
         subPannel.setLayout(subPannelLayout);
@@ -205,7 +205,7 @@ public class GameRemove extends javax.swing.JFrame {
         String[] games = new String[tempGameList.size() + 1];
         for(int i = 0; i < tempGameList.size() + 1; i++){
             if(i == 0){
-                games[i] = "Seleccionar juego";
+                games[i] = "Seleccionar joc";
             }
             else{
                 games[i] = tempGameList.get(i-1).getName();
@@ -225,7 +225,7 @@ public class GameRemove extends javax.swing.JFrame {
 
         cancelButton.setBackground(new java.awt.Color(150, 150, 150));
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
-        cancelButton.setText("Cancelar");
+        cancelButton.setText("Cancel·lar");
         cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cancelButtonMouseClicked(evt);
@@ -282,14 +282,14 @@ public class GameRemove extends javax.swing.JFrame {
     private void deleteButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteButtonMouseClicked
         Game game = updateInfo();
         if(game == null){
-            errorLabel.setText("ERROR: Debe seleccionar un juego");
+            errorLabel.setText("ERROR: S'ha de seleccionar un joc");
             return;
         }
         
         List<Borrow> checkList = BorrowList.getList();
         for (int i = 0; i < checkList.size(); i++){
             if(game == checkList.get(i).getGame() && !checkList.get(i).isReturned()){
-                errorLabel.setText("ERROR: No se puede eliminar un juego con préstamos activos");
+                errorLabel.setText("ERROR: No es possible eliminar un joc amb lloguers actius");
                 return;
             }
         }

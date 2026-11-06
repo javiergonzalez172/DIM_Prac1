@@ -41,7 +41,7 @@
                                   <Component id="dataLabel2" min="-2" max="-2" attributes="0"/>
                                   <Component id="dataLabel1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="118" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="119" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -114,22 +114,24 @@
                               <Component id="gameField" alignment="1" pref="169" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="userLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="idLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="userLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="userField" min="-2" pref="169" max="-2" attributes="0"/>
+                                  <Component id="idField" min="-2" pref="169" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="userField" min="-2" pref="169" max="-2" attributes="0"/>
-                              <Component id="idField" min="-2" pref="169" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="endDateLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="endDateField" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="endDateLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Component id="endDateField" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -183,12 +185,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="idLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Num. de registro"/>
+            <Property name="text" type="java.lang.String" value="Num. de registre"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="userLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Usuario"/>
+            <Property name="text" type="java.lang.String" value="Usuari"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="userField">
@@ -201,13 +203,13 @@
             </Property>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="List&lt;User&gt; tempUserList = UserList.getList();&#xa;String[] users = new String[tempUserList.size() + 1];&#xa;for(int i = 0; i &lt; tempUserList.size() + 1; i++){&#xa;    if(i == 0){&#xa;        users[i] = &quot;Seleccionar usuario&quot;;&#xa;    }&#xa;    else{&#xa;        users[i] = tempUserList.get(i-1).getName();&#xa;    }&#xa;}"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="List&lt;User&gt; tempUserList = UserList.getList();&#xa;String[] users = new String[tempUserList.size() + 1];&#xa;for(int i = 0; i &lt; tempUserList.size() + 1; i++){&#xa;    if(i == 0){&#xa;        users[i] = &quot;Seleccionar usuari&quot;;&#xa;    }&#xa;    else{&#xa;        users[i] = tempUserList.get(i-1).getName();&#xa;    }&#xa;}"/>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="gameLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Juego"/>
+            <Property name="text" type="java.lang.String" value="Joc"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="gameField">
@@ -224,7 +226,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gameFieldActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="List&lt;Game&gt; tempGameList = GameList.getList();&#xa;String[] games = new String[tempGameList.size() + 1];&#xa;for(int i = 0; i &lt; tempGameList.size() + 1; i++){&#xa;    if(i == 0){&#xa;        games[i] = &quot;Seleccionar juego&quot;;&#xa;    }&#xa;    else{&#xa;        games[i] = tempGameList.get(i-1).getName();&#xa;    }&#xa;}"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="List&lt;Game&gt; tempGameList = GameList.getList();&#xa;String[] games = new String[tempGameList.size() + 1];&#xa;for(int i = 0; i &lt; tempGameList.size() + 1; i++){&#xa;    if(i == 0){&#xa;        games[i] = &quot;Seleccionar joc&quot;;&#xa;    }&#xa;    else{&#xa;        games[i] = tempGameList.get(i-1).getName();&#xa;    }&#xa;}"/>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
@@ -241,7 +243,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="startDateLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha de inicio"/>
+            <Property name="text" type="java.lang.String" value="Data d&apos;inici"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JSpinner" name="endDateField">
@@ -260,7 +262,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="endDateLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha de devoluci&#xf3;n"/>
+            <Property name="text" type="java.lang.String" value="Data de tornada"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -363,25 +365,25 @@
         </Component>
         <Component class="javax.swing.JLabel" name="pcLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="(0 unidades disponibles)"/>
+            <Property name="text" type="java.lang.String" value="(0 unitats disponibles)"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="ps5Label">
           <Properties>
-            <Property name="text" type="java.lang.String" value="(0 unidades disponibles)"/>
+            <Property name="text" type="java.lang.String" value="(0 unitats disponibles)"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="xboxLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="(0 unidades disponibles)"/>
+            <Property name="text" type="java.lang.String" value="(0 unitats disponibles)"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="switch2Label">
           <Properties>
-            <Property name="text" type="java.lang.String" value="(0 unidades disponibles)"/>
+            <Property name="text" type="java.lang.String" value="(0 unitats disponibles)"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
@@ -419,24 +421,24 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="genreLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="G&#xe9;nero: N/A"/>
+            <Property name="text" type="java.lang.String" value="G&#xe8;nere: N/A"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="dataLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Datos del pr&#xe9;stamo:"/>
+        <Property name="text" type="java.lang.String" value="Dades del lloguer:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="dataLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Plataformas disponibles:"/>
+        <Property name="text" type="java.lang.String" value="Plataformes disponibles:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="dataLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Informaci&#xf3;n del juego:"/>
+        <Property name="text" type="java.lang.String" value="Informaci&#xf3; del joc:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="confirmButton">
@@ -461,10 +463,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="text" type="java.lang.String" value="Cancel&#xb7;lar"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="cancelButtonMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="errorLabel">

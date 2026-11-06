@@ -79,15 +79,15 @@ public class BorrowCreation extends javax.swing.JFrame {
         idField.setEnabled(false);
         idField.addActionListener(this::idFieldActionPerformed);
 
-        idLabel.setText("Num. de registro");
+        idLabel.setText("Num. de registre");
 
-        userLabel.setText("Usuario");
+        userLabel.setText("Usuari");
 
         List<User> tempUserList = UserList.getList();
         String[] users = new String[tempUserList.size() + 1];
         for(int i = 0; i < tempUserList.size() + 1; i++){
             if(i == 0){
-                users[i] = "Seleccionar usuario";
+                users[i] = "Seleccionar usuari";
             }
             else{
                 users[i] = tempUserList.get(i-1).getName();
@@ -96,13 +96,13 @@ public class BorrowCreation extends javax.swing.JFrame {
         userField.setModel(new javax.swing.DefaultComboBoxModel<>(users));
         userField.setMinimumSize(new java.awt.Dimension(64, 22));
 
-        gameLabel.setText("Juego");
+        gameLabel.setText("Joc");
 
         List<Game> tempGameList = GameList.getList();
         String[] games = new String[tempGameList.size() + 1];
         for(int i = 0; i < tempGameList.size() + 1; i++){
             if(i == 0){
-                games[i] = "Seleccionar juego";
+                games[i] = "Seleccionar joc";
             }
             else{
                 games[i] = tempGameList.get(i-1).getName();
@@ -117,7 +117,7 @@ public class BorrowCreation extends javax.swing.JFrame {
         startDateField.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         startDateField.setEnabled(false);
 
-        startDateLabel.setText("Fecha de inicio");
+        startDateLabel.setText("Data d'inici");
 
         LocalDateTime date = LocalDateTime.now().plus(1, ChronoUnit.WEEKS);
         Date finalDate = Date.from(date.atZone(ZoneId.systemDefault()).toInstant());
@@ -125,7 +125,7 @@ public class BorrowCreation extends javax.swing.JFrame {
         endDateField.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         endDateField.setEnabled(false);
 
-        endDateLabel.setText("Fecha de devolución");
+        endDateLabel.setText("Data de tornada");
 
         javax.swing.GroupLayout dataPanelLayout = new javax.swing.GroupLayout(dataPanel);
         dataPanel.setLayout(dataPanelLayout);
@@ -142,19 +142,20 @@ public class BorrowCreation extends javax.swing.JFrame {
                         .addGroup(dataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(startDateField, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(gameField, javax.swing.GroupLayout.Alignment.TRAILING, 0, 169, Short.MAX_VALUE)))
-                    .addGroup(dataPanelLayout.createSequentialGroup()
-                        .addGroup(dataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(idLabel)
-                            .addComponent(userLabel))
-                        .addGap(50, 50, 50)
-                        .addGroup(dataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userField, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(dataPanelLayout.createSequentialGroup()
-                        .addComponent(endDateLabel)
-                        .addGap(30, 30, 30)
-                        .addComponent(endDateField)))
+                    .addGroup(dataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(dataPanelLayout.createSequentialGroup()
+                            .addGroup(dataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(idLabel)
+                                .addComponent(userLabel))
+                            .addGap(50, 50, 50)
+                            .addGroup(dataPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(userField, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(dataPanelLayout.createSequentialGroup()
+                            .addComponent(endDateLabel)
+                            .addGap(54, 54, 54)
+                            .addComponent(endDateField))))
                 .addContainerGap())
         );
         dataPanelLayout.setVerticalGroup(
@@ -217,16 +218,16 @@ public class BorrowCreation extends javax.swing.JFrame {
             }
         });
 
-        pcLabel.setText("(0 unidades disponibles)");
+        pcLabel.setText("(0 unitats disponibles)");
         pcLabel.setEnabled(false);
 
-        ps5Label.setText("(0 unidades disponibles)");
+        ps5Label.setText("(0 unitats disponibles)");
         ps5Label.setEnabled(false);
 
-        xboxLabel.setText("(0 unidades disponibles)");
+        xboxLabel.setText("(0 unitats disponibles)");
         xboxLabel.setEnabled(false);
 
-        switch2Label.setText("(0 unidades disponibles)");
+        switch2Label.setText("(0 unitats disponibles)");
         switch2Label.setEnabled(false);
 
         javax.swing.GroupLayout platformPanelLayout = new javax.swing.GroupLayout(platformPanel);
@@ -272,7 +273,7 @@ public class BorrowCreation extends javax.swing.JFrame {
 
         infoPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        genreLabel.setText("Género: N/A");
+        genreLabel.setText("Gènere: N/A");
 
         javax.swing.GroupLayout infoPanelLayout = new javax.swing.GroupLayout(infoPanel);
         infoPanel.setLayout(infoPanelLayout);
@@ -291,11 +292,11 @@ public class BorrowCreation extends javax.swing.JFrame {
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
-        dataLabel.setText("Datos del préstamo:");
+        dataLabel.setText("Dades del lloguer:");
 
-        dataLabel1.setText("Plataformas disponibles:");
+        dataLabel1.setText("Plataformes disponibles:");
 
-        dataLabel2.setText("Información del juego:");
+        dataLabel2.setText("Informació del joc:");
 
         confirmButton.setBackground(new java.awt.Color(34, 139, 34));
         confirmButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -308,12 +309,13 @@ public class BorrowCreation extends javax.swing.JFrame {
 
         cancelButton.setBackground(new java.awt.Color(153, 0, 0));
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
-        cancelButton.setText("Cancelar");
+        cancelButton.setText("Cancel·lar");
         cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cancelButtonMouseClicked(evt);
             }
         });
+        cancelButton.addActionListener(this::cancelButtonActionPerformed);
 
         errorLabel.setForeground(new java.awt.Color(255, 0, 0));
 
@@ -336,7 +338,7 @@ public class BorrowCreation extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(dataLabel2)
                                     .addComponent(dataLabel1))
-                                .addGap(0, 118, Short.MAX_VALUE))))
+                                .addGap(0, 119, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(errorLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -385,7 +387,7 @@ public class BorrowCreation extends javax.swing.JFrame {
             }
         }
         if (user == null){
-            errorLabel.setText("ERROR: Debe seleccionar un usuario");
+            errorLabel.setText("ERROR: Tens que seleccionar un usuari");
             return;
         }
         
@@ -397,7 +399,7 @@ public class BorrowCreation extends javax.swing.JFrame {
             }
         }
         if (game == null){
-            errorLabel.setText("ERROR: Debe seleccionar un juego");
+            errorLabel.setText("ERROR: Tens que seleccionar un joc");
             return;
         }
         
@@ -411,7 +413,7 @@ public class BorrowCreation extends javax.swing.JFrame {
         } else if (switch2Radio.isSelected()){
             platform = PLATFORM.SWITCH_2;
         } else {
-            errorLabel.setText("ERROR: Debe seleccionar una plataforma");
+            errorLabel.setText("ERROR: Tens que seleccionar una plataforma");
             return;
         }
         
@@ -442,7 +444,7 @@ public class BorrowCreation extends javax.swing.JFrame {
             }
         }
         //Devuelve todos los valores a los default
-        genreLabel.setText("Género: N/A");
+        genreLabel.setText("Gènere: N/A");
         pcRadio.setEnabled(false);
         pcRadio.setSelected(false);
         ps5Radio.setEnabled(false);
@@ -451,42 +453,42 @@ public class BorrowCreation extends javax.swing.JFrame {
         xboxRadio.setSelected(false);
         switch2Radio.setEnabled(false);
         switch2Radio.setSelected(false);
-        pcLabel.setText("(0 unidades disponibles)");
+        pcLabel.setText("(0 unitats disponibles)");
         pcLabel.setEnabled(false);
-        ps5Label.setText("(0 unidades disponibles)");
+        ps5Label.setText("(0 unitats disponibles)");
         ps5Label.setEnabled(false);
-        xboxLabel.setText("(0 unidades disponibles)");
+        xboxLabel.setText("(0 unitats disponibles)");
         xboxLabel.setEnabled(false);
-        switch2Label.setText("(0 unidades disponibles)");
+        switch2Label.setText("(0 unitats disponibles)");
         switch2Label.setEnabled(false);
         
         if (game == null){ 
             return;
         }
         
-        genreLabel.setText("Género: " + game.getGenre());
+        genreLabel.setText("Gènere: " + game.getGenre());
         
         List<PLATFORM> platforms = game.getPlatforms();
         List<Integer> amounts = game.getCounts();
         for(int i = 0; i < platforms.size(); i++){
             if(platforms.get(i) == PLATFORM.PC && amounts.get(i) > 0){
                 pcRadio.setEnabled(true);
-                pcLabel.setText("(" + amounts.get(i) + " unidades disponibles)");
+                pcLabel.setText("(" + amounts.get(i) + " unitats disponibles)");
                 pcLabel.setEnabled(true);
             }
             if(platforms.get(i) == PLATFORM.PS5 && amounts.get(i) > 0){
                 ps5Radio.setEnabled(true);
-                ps5Label.setText("(" + amounts.get(i) + " unidades disponibles)");
+                ps5Label.setText("(" + amounts.get(i) + " unitats disponibles)");
                 ps5Label.setEnabled(true);
             }
             if(platforms.get(i) == PLATFORM.XBOX && amounts.get(i) > 0){
                 xboxRadio.setEnabled(true);
-                xboxLabel.setText("(" + amounts.get(i) + " unidades disponibles)");
+                xboxLabel.setText("(" + amounts.get(i) + " unitats disponibles)");
                 xboxLabel.setEnabled(true);
             }
             if(platforms.get(i) == PLATFORM.SWITCH_2 && amounts.get(i) > 0){
                 switch2Radio.setEnabled(true);
-                switch2Label.setText("(" + amounts.get(i) + " unidades disponibles)");
+                switch2Label.setText("(" + amounts.get(i) + " unitats disponibles)");
                 switch2Label.setEnabled(true);
             }
         }
@@ -519,6 +521,10 @@ public class BorrowCreation extends javax.swing.JFrame {
     private void gameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_gameFieldActionPerformed
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cancelButtonActionPerformed
 
     /**
      * @param args the command line arguments

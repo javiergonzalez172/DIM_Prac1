@@ -58,17 +58,17 @@ public class UserRemove extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        mainLabel.setText("Usuario:");
+        mainLabel.setText("Usuari:");
 
         subPannel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        nameLabel.setText("Nombre:");
+        nameLabel.setText("Nom:");
 
         nameField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         nameField.setEnabled(false);
         jScrollPane1.setViewportView(nameField);
 
-        surnamesLabel.setText("Apellidos:");
+        surnamesLabel.setText("Cognoms:");
 
         surnamesField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         surnamesField.setEnabled(false);
@@ -84,9 +84,9 @@ public class UserRemove extends javax.swing.JFrame {
         phoneField.setEnabled(false);
         jScrollPane4.setViewportView(phoneField);
 
-        phoneLabel.setText("Teléfono:");
+        phoneLabel.setText("Telèfon:");
 
-        dateLabel.setText("Fecha de registro:");
+        dateLabel.setText("Data de registre:");
 
         dateField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         dateField.setEnabled(false);
@@ -106,11 +106,11 @@ public class UserRemove extends javax.swing.JFrame {
                     .addComponent(dateLabel))
                 .addGap(57, 57, 57)
                 .addGroup(subPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
                     .addComponent(jScrollPane1)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         subPannelLayout.setVerticalGroup(
@@ -143,7 +143,7 @@ public class UserRemove extends javax.swing.JFrame {
         String[] users = new String[tempUserList.size() + 1];
         for(int i = 0; i < tempUserList.size() + 1; i++){
             if(i == 0){
-                users[i] = "Seleccionar usuario";
+                users[i] = "Seleccionar usuari";
             }
             else{
                 users[i] = tempUserList.get(i-1).getName();
@@ -163,7 +163,7 @@ public class UserRemove extends javax.swing.JFrame {
 
         cancelButton.setBackground(new java.awt.Color(150, 150, 150));
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
-        cancelButton.setText("Cancelar");
+        cancelButton.setText("Cancel·lar");
         cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cancelButtonMouseClicked(evt);
@@ -225,14 +225,14 @@ public class UserRemove extends javax.swing.JFrame {
     private void deleteButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteButtonMouseClicked
         User user = updateInfo();
         if(user == null){
-            errorLabel.setText("ERROR: Debe seleccionar un usuario");
+            errorLabel.setText("ERROR: S'ha de seleccionar un usuari");
             return;
         }
         
         List<Borrow> checkList = BorrowList.getList();
         for (int i = 0; i < checkList.size(); i++){
             if(user == checkList.get(i).getUser() && !checkList.get(i).isReturned()){
-                errorLabel.setText("ERROR: No se puede eliminar un usuario con préstamos activos");
+                errorLabel.setText("ERROR: No es possible eliminar un usuari amb lloguers actius");
                 return;
             }
         }
