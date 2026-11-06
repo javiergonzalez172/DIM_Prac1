@@ -14,14 +14,14 @@ import java.util.List;
  *
  * @author Alumne
  */
-public class UserEdit extends javax.swing.JFrame {
+public class UserRemove extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(UserEdit.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(UserRemove.class.getName());
 
     /**
      * Creates new form UserDelete
      */
-    public UserEdit() {
+    public UserRemove() {
         initComponents();
     }
 
@@ -64,22 +64,32 @@ public class UserEdit extends javax.swing.JFrame {
 
         nameLabel.setText("Nombre:");
 
+        nameField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        nameField.setEnabled(false);
         jScrollPane1.setViewportView(nameField);
 
         surnamesLabel.setText("Apellidos:");
 
+        surnamesField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        surnamesField.setEnabled(false);
         jScrollPane2.setViewportView(surnamesField);
 
         dniLabel.setText("DNI:");
 
+        dniField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        dniField.setEnabled(false);
         jScrollPane3.setViewportView(dniField);
 
+        phoneField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        phoneField.setEnabled(false);
         jScrollPane4.setViewportView(phoneField);
 
         phoneLabel.setText("Teléfono:");
 
         dateLabel.setText("Fecha de registro:");
 
+        dateField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        dateField.setEnabled(false);
         jScrollPane5.setViewportView(dateField);
 
         javax.swing.GroupLayout subPannelLayout = new javax.swing.GroupLayout(subPannel);
@@ -229,7 +239,7 @@ public class UserEdit extends javax.swing.JFrame {
         
         List<User> list = UserList.getList();
         for (int i = 0; i < list.size(); i++){
-            if(user.getName().equals(list.get(i).getName())){
+            if(user == list.get(i)){
                 list.remove(i);
             }
         }
@@ -284,7 +294,7 @@ public class UserEdit extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new UserEdit().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new UserRemove().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

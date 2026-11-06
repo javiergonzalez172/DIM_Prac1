@@ -128,6 +128,7 @@ public class Homescreen extends javax.swing.JFrame {
         menuGameButton.add(agregarJuego);
 
         eliminarJuego.setText("Eliminar...");
+        eliminarJuego.addActionListener(this::eliminarJuegoActionPerformed);
         menuGameButton.add(eliminarJuego);
 
         mainMenuBar.add(menuGameButton);
@@ -229,8 +230,8 @@ public class Homescreen extends javax.swing.JFrame {
             List<PLATFORM> game2Platforms = new ArrayList<>(){{add(PLATFORM.PC); add(PLATFORM.XBOX);}};
             List<Integer> game1Counts = new ArrayList<>(){{add(2); add(3);}}; //Cantidades consideradas como si ya estuvieran en prestamo
             List<Integer> game2Counts = new ArrayList<>(){{add(1); add(4);}};
-            Game game1 = new Game("game 1", GENRE.RPG, game1Platforms, game1Counts);
-            Game game2 = new Game("game 2", GENRE.ROGUELIKE, game2Platforms, game2Counts);
+            Game game1 = new Game("juego 1", GENRE.RPG, game1Platforms, game1Counts);
+            Game game2 = new Game("juego 2", GENRE.ROGUELIKE, game2Platforms, game2Counts);
             GameList.add(game1);
             GameList.add(game2);
         }
@@ -268,8 +269,13 @@ public class Homescreen extends javax.swing.JFrame {
 
     private void eliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarUsuarioActionPerformed
         this.setVisible(false);
-        new UserEdit().setVisible(true);
+        new UserRemove().setVisible(true);
     }//GEN-LAST:event_eliminarUsuarioActionPerformed
+
+    private void eliminarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarJuegoActionPerformed
+        this.setVisible(false);
+        new GameRemove().setVisible(true);
+    }//GEN-LAST:event_eliminarJuegoActionPerformed
     
     /**
      * @param args the command line arguments
