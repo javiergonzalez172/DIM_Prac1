@@ -62,7 +62,6 @@ public class Homescreen extends javax.swing.JFrame {
         menuGameButton = new javax.swing.JMenu();
         agregarJuego = new javax.swing.JMenuItem();
         eliminarJuego = new javax.swing.JMenuItem();
-        languageMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prestamos");
@@ -132,9 +131,6 @@ public class Homescreen extends javax.swing.JFrame {
         menuGameButton.add(eliminarJuego);
 
         mainMenuBar.add(menuGameButton);
-
-        languageMenu.setText("Idioma");
-        mainMenuBar.add(languageMenu);
 
         setJMenuBar(mainMenuBar);
 
@@ -310,7 +306,6 @@ public class Homescreen extends javax.swing.JFrame {
     private javax.swing.JMenuItem eliminarPrestamo;
     private javax.swing.JMenuItem eliminarUsuario;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JMenu languageMenu;
     private javax.swing.JMenuBar mainMenuBar;
     private javax.swing.JTable mainTable;
     private javax.swing.JMenu menuBorrowButton;
